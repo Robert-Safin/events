@@ -1,8 +1,14 @@
+import {NextPage} from 'next'
+import {getFeaturedEvents} from '../../dummy-data'
+import EventList from '@/components/EventList/EventList'
 
-export default function Home() {
+const HomePage:NextPage = () => {
+  const featuredEvents = getFeaturedEvents()
   return (
     <>
-    1
+    <EventList events={featuredEvents}/>
     </>
   )
 }
+
+export default HomePage
