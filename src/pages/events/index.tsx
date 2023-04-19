@@ -1,11 +1,13 @@
-import { NextPage } from "next"
-
-const AllEventsPage:NextPage = () => {
+import { NextPage } from "next";
+import { getAllEvents } from "../../../dummy-data";
+import EventList from "@/components/EventList/EventList";
+const HomePage:NextPage = () => {
+  const events = getAllEvents()
   return (
     <>
-    <h1>all events</h1>
+    <EventList events={events}/>
     </>
   )
 }
 
-export default AllEventsPage
+export default HomePage
