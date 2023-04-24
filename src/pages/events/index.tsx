@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
-import { getAllEvents } from "../../../dummy-data";
+
 import EventList from "@/components/EventList/EventList";
-import { getFeaturedEvents } from "../../../helpers/api-util";
+import { getAllEvents } from "../../../helpers/api-util";
 
 interface Event {
   id: string,
@@ -29,11 +29,12 @@ const HomePage:NextPage<EventArray> = (props) => {
 
 export const getStaticProps:GetStaticProps = async() => {
 
-  const events = await getFeaturedEvents()
+  const events = await getAllEvents()
   return {
     props : {
       events : events
-    }
+    },
+    revalidate: 1800
   }
 }
 

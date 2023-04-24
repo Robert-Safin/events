@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import { useRouter } from "next/router";
 import { ParsedUrlQuery } from "querystring";
 import { getFilteredEvents } from "../../../dummy-data";
@@ -55,5 +55,6 @@ const FilteredEvents: NextPage<QueryParams> = () => {
     </>
   );
 };
+
 
 export default FilteredEvents;
