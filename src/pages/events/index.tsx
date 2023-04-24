@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from "next";
-
+import Head from 'next/head'
 import EventList from "@/components/EventList/EventList";
 import { getAllEvents } from "../../../helpers/api-util";
 
@@ -22,6 +22,10 @@ interface EventArray {
 const HomePage:NextPage<EventArray> = (props) => {
   return (
     <>
+    <Head>
+      <title>Title which appears in the tab</title>
+      <meta name="description" content="description for search engines cralwers"/>
+    </Head>
     <EventList events={props.events}/>
     </>
   )
