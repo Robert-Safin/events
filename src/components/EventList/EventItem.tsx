@@ -22,7 +22,7 @@ const EventItem: FC<Props> = (props) => {
   const exploreLink = `events/${props.eventData.id}`
   return (
     <li className={styles.item}>
-      <Image src={'/' + props.eventData.image} alt={props.eventData.description} width={300} height={300} />
+      <Image src={'/' + props.eventData.image} alt={props.eventData.description} width={250} height={160} />
       <div className={styles.content}>
         <div className={styles.summary}>
           <h2>{props.eventData.title}</h2>

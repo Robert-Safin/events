@@ -22,6 +22,7 @@ interface EventArray {
 const HomePage:NextPage<EventArray> = (props) => {
   return (
     <>
+
     <Head>
       <title>Title which appears in the tab</title>
       <meta name="description" content="description for search engines cralwers"/>

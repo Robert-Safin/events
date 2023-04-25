@@ -3,7 +3,7 @@ import { getAllEvents, getEventById } from "../../../helpers/api-util"
 import EventSummary from "@/components/event-detail/event-summary"
 import EventLogistics from "@/components/event-detail/event-logistics"
 import EventContent from "@/components/event-detail/event-content"
-
+import Head from 'next/head'
 interface Event {
   id: string,
   title: string,
@@ -28,6 +28,10 @@ const EventDetailPage: NextPage<Props> = (props) => {
 
   return (
     <>
+    <Head>
+      <title>{event.title}</title>
+      <meta name="desciprtion" content="...."/>
+    </Head>
       <EventSummary title={event.title} />
       <EventLogistics date={event.date}
         address={event.location}
